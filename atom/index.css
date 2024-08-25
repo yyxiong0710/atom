@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: grid;
+    place-content: center;
+}
+
+.nucles{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    /* background-color: ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.one{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.two{
+    position:absolute;
+    top: 30px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.proton{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.neutron{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:aliceblue;
+}
+
+@keyframes move_x{
+    from{
+        left: 1200px;
+    }
+    to{
+        left: 400px;
+    }
+}
+
+@keyframes move_x3{
+    from{
+        left: 400px;
+    }
+    to{
+        left: 1200px;
+    }
+}
+
+@keyframes move_x2{
+    from{
+        left: 600px;
+    }
+    to{
+        left: 900px;
+    }
+}
+
+@keyframes move_y{
+    from{
+        top: 700px;
+    }
+    to{
+        top: 100px;
+    }
+}
+
+@keyframes move_y2{
+    from{
+        top: 100px;
+    }
+    to{
+        top: 700px;
+    }
+}
+
+@keyframes move_y3{
+    from{
+        top: 250px;
+    }
+    to{
+        top: 450px;
+    }
+}
+
+@keyframes move_y4{
+    from{
+        top:450px;
+    }
+    to{
+        top: 250px;
+    }
+}
+
+.xmove{
+    position: absolute;
+    width: 5px;
+    animation: move_x 3s infinite alternate;
+}
+
+.xmove_2{
+    position: absolute;
+    width: 5px;
+    animation: move_x2 3s infinite alternate;
+}
+
+.xmove_3{
+    position: absolute;
+    left: 400px;
+    width: 5px;
+    animation: move_x3 3s infinite 1s alternate;
+}
+
+.electron{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: azure;
+    filter: blur(1.5px);
+}
+
+.electron.fir{
+    animation: move_y 4s infinite 1s alternate;
+}
+
+.electron.sec{
+    animation: move_y2 4s infinite  alternate;
+}
+
+.electron.three{
+    animation: move_y3 4s infinite 1s alternate;
+}
+
+.electron.four{
+    animation: move_y4 4s infinite alternate;
+}
